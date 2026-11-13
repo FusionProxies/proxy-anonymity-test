@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="https://fusionproxy.net/?utm_source=github&utm_medium=proxy-anonymity-test">
+  <a href="https://fusionproxy.net/?utm_source=github&utm_medium=referral&utm_campaign=proxy-anonymity-test">
     <picture>
       <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/FusionProxies/.github/main/assets/logo-on-dark.png">
       <img src="https://raw.githubusercontent.com/FusionProxies/.github/main/assets/logo-on-light.png" alt="Fusion Proxy" height="52">
@@ -59,15 +59,25 @@ Headers are only one way a proxy is detected. Websites also check:
 
 - **IP reputation**: datacenter ranges and IPs on public proxy lists are flagged no matter what the headers say. Residential IPs belong to home connections and are rarely on such lists.
 - **DNS leaks**: with `socks5://` (not `socks5h://`) or a browser that resolves names locally, your own DNS server sees every site you visit.
-- **WebRTC leaks**: a browser can reveal your real IP through WebRTC even behind a proxy. Test it with the [WebRTC leak test](https://fusionproxy.net/tools/webrtc-leak-test?utm_source=github&utm_medium=proxy-anonymity-test).
+- **WebRTC leaks**: a browser can reveal your real IP through WebRTC even behind a proxy. Test it with the [WebRTC leak test](https://fusionproxy.net/tools/webrtc-leak-test?utm_source=github&utm_medium=referral&utm_campaign=proxy-anonymity-test).
 - **Location mismatches**: an IP in Germany with a browser set to US time zone and language stands out.
+
+## Tests
+
+```bash
+pip install -r requirements.txt pytest
+pytest
+```
+
+The tests feed the checker judge answers for transparent, anonymous, elite and dead proxies. No network, proxy or credentials needed.
 
 ## Related
 
 - [proxy-checker](https://github.com/FusionProxies/proxy-checker): speed, exit IP and country for thousands of proxies
-- [What is my IP](https://fusionproxy.net/tools/my-ip?utm_source=github&utm_medium=proxy-anonymity-test) and the [online proxy checker](https://fusionproxy.net/tools/proxy-checker?utm_source=github&utm_medium=proxy-anonymity-test)
+- [free-proxy-list](https://github.com/FusionProxies/free-proxy-list): public proxies to test, refreshed every 30 minutes
+- [What is my IP](https://fusionproxy.net/tools/my-ip?utm_source=github&utm_medium=referral&utm_campaign=proxy-anonymity-test) and the [online proxy checker](https://fusionproxy.net/tools/proxy-checker?utm_source=github&utm_medium=referral&utm_campaign=proxy-anonymity-test)
 
-Need elite proxies with clean IPs? [Fusion Proxy residential proxies](https://fusionproxy.net/proxies/residential?utm_source=github&utm_medium=proxy-anonymity-test) from $2.95/GB, with a [free trial](https://fusionproxy.net/free-trial?utm_source=github&utm_medium=proxy-anonymity-test).
+Need elite proxies with clean IPs? [Fusion Proxy residential proxies](https://fusionproxy.net/proxies/residential?utm_source=github&utm_medium=referral&utm_campaign=proxy-anonymity-test) from $2.95/GB, with a [free trial](https://fusionproxy.net/free-trial?utm_source=github&utm_medium=referral&utm_campaign=proxy-anonymity-test).
 
 ## License
 
